@@ -2,7 +2,7 @@ function [I_ans] = image_mixer(IL, IH, thL_, thH_, pow_c, undefine_c, output_ste
 %IMAGE_MIXER 混合IH与IL，两者有效位数均为高11位
 %   Hmax和thH均对低11位生效(0-2047)
 %   Lmax和thL均对高11位生效(0-2048-65535)
-%   但是IH与IL均为高11位有效(0-2048-65535)
+%   但是IH与IL均为高11位生效(0-2048-65535)
 %   请注意区分
 
 thH = thH_;
