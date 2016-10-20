@@ -16,7 +16,7 @@ gauss_diameter = 3;
 
 
 if ~exist(output_folder,'dir') 
-    mkdir(output_folder)         % 若不存在，在当前目录中产生一个子目录‘Figure’
+    mkdir(output_folder)         % 若不存在，在当前目录中产生一个子目录output_folder
 end 
 
 load(['w_map_',strmap,'.mat']);
@@ -88,17 +88,14 @@ if(0)
     imshow(IL);
 end
 
-%回到最初的问题……什么样算好？
+
 if(0)
     close all;
-%     line1 = I16(1400,:);
     line2 = I_ans(1400,:);
     line3 = I_ans_gauss(1400,:);
     line4 = IL(1400,:);
     line5 = IH(1400,:);
 
-%     figure('name','I16_old');
-%     plot(line1);
     figure('name','I16_gauss');
     plot(line3);
     figure('name','I_low');

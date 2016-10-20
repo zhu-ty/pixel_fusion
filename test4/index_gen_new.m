@@ -55,6 +55,7 @@ for i = 1:Lmax+1
 %             %mid = bitshift(bitand(mid,maskL6), 5);
 %             mid = bitshift(mid, 5);
 %             w_map(i,j) = high + mid + low;
+
             L = bitshift(i,5);
             H = j;
             w_map(i,j) = uint16(((1 - w(i,j)) * L) + w(i,j) * H);
