@@ -1,0 +1,6 @@
+others
+others/*
+*.tiff
+*.tif
+*.mat
+*.png
