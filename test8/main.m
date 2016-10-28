@@ -4,23 +4,23 @@ clear;
 
 % strL = ['1LB';'3LB';'4LS'];
 % strH = ['1HB';'3HB';'4HS'];
-strL = {'6L','7L','8L','9L'};
-strH = {'6H','7H','8H','9H'};
+strL = {'l'};
+strH = {'h'};
 % thL_ = [2000:200:2200];
 % thH_ = [1400:100:1700];
 % pow_c = [0.15:0.05:0.25];
 
 thL_ = [2000];
-thH_ = [51200];
+thH_ = [54400];
 pow_c = [0.2];
 undefine_area = 0.5;
-%推荐参数：2000_1600_0.2_0.5
+%推荐参数：2000_51200/54400_0.2_0.5
 
 output_folder = 'output';
 Hmax_ = 65535;
 Lmax_ = 65535;
 op_step = 500;
-mul = 30;
+mul = 10;
 s_strL = size(strL,2);
 s_thL_ = size(thL_,2);
 s_thH_ = size(thH_,2);
