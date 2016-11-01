@@ -1,9 +1,9 @@
 clear;
 close all;
 
-load('DSNU.mat');
+load('DSNU_51.mat');
 
-pics = {'black(1).tif','black(2).tif','black(3).tif','light(1).tif','light(2).tif','light(3).tif','light(4).tif','light(5).tif','light(6).tif'};
+pics = {'L2.tif'};
 npics = size(pics, 2);
 
 PIC_MAX_ROW = 2160;

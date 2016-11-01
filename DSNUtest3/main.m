@@ -2,8 +2,8 @@ clear;
 close all;
 
 %const
-bpics = {'p_black(1).tif','p_black(2).tif','p_black(3).tif'};
-lpics = {'p_light(1).tif','p_light(2).tif','p_light(3).tif','p_light(4).tif','p_light(5).tif','p_light(6).tif'};
+bpics = {'black(1).tif','black(2).tif','black(3).tif'};
+lpics = {'light(1).tif','light(2).tif','light(3).tif','light(4).tif','light(5).tif','light(6).tif'};
 nbpics = size(bpics, 2);
 nlpics = size(lpics, 2);
 
@@ -11,8 +11,8 @@ PIC_MAX_ROW = 2160;
 PIC_MAX_COL = 2560;
 
 %must be odd!
-SAMP_COL_LEN = 201;
-SAMP_ROW_LEN = 201;
+SAMP_COL_LEN = 51;
+SAMP_ROW_LEN = 51;
 
 %model
 %y=output
@@ -75,7 +75,7 @@ for i = 1 : PIC_MAX_COL
 end
 
 %save
-save('DSNU_201_2.mat','a','b1','b2','b3');
+save('DSNU_51.mat','a','b1','b2','b3');
 
 if(0)
     plot(x_list_u(:,100),y_list_u(:,100) + b1(1,100) + b2 ,'+');
