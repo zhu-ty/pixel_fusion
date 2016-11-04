@@ -4,7 +4,7 @@ clear;
 
 % strL = ['1LB';'3LB';'4LS'];
 % strH = ['1HB';'3HB';'4HS'];
-strL = {'p_51_L2'};
+strL = {'p_row_30_2_p_31_2_robust_L2'};
 strH = {'H2'};
 % thL_ = [2000:200:2200];
 % thH_ = [1400:100:1700];
@@ -14,7 +14,7 @@ thL_ = [2000];
 thH_ = [63000];
 pow_c = [0.2];
 undefine_area = 0.5;
-mul = 28;
+mul = 29.5;
 %ÍÆ¼ö²ÎÊý£º2000_51200/54400/63000_0.2_0.5/28
 
 output_folder = 'output';
