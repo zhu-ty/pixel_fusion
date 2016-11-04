@@ -1,6 +1,6 @@
 function [I] = useage_col(I)
 
-load('DSNU_31_2_robust.mat');
+load('DSNU_31_2_robust-use-.mat');
 
 PIC_MAX_ROW = 2160;
 PIC_MAX_COL = 2560;

@@ -19,7 +19,7 @@ thL = bitshift(thL_,-5);
 Hmax = bitshift(Hmax_,-5);
 Lmax = bitshift(Lmax_,-5);
 already_have = 0;
-str = ['w_map_',int2str(thL_),'_',int2str(thH_),'_',num2str(pow_c),'_',num2str(undefine_c),'_',num2str(mul),'.mat'];
+str = ['w_map_',int2str(thL_),'_',int2str(thH_),'_',num2str(pow_c),'_',num2str(undefine_c),'_',num2str(mul),'-use-','.mat'];
 if(exist(str,'file'))
     already_have = 1;
 end
