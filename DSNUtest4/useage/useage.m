@@ -3,7 +3,7 @@ close all;
 
 load('DSNU_51.mat');
 
-pics = {'L2.tif'};
+pics = {'(1).tif','(2).tif','(3).tif','(4).tif','(5).tif','L2.tif'};
 npics = size(pics, 2);
 
 PIC_MAX_ROW = 2160;

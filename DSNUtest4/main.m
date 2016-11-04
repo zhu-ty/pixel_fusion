@@ -2,8 +2,11 @@ clear;
 close all;
 
 %const
-bpics = {'p_black(1).tif','black(2).tif','black(3).tif'};
-lpics = {'light(1).tif','light(2).tif','light(3).tif','light(4).tif','light(5).tif','light(6).tif'};
+bpics = {'black(1).tif','black(2).tif','black(3).tif'};
+% lpics = {'(1).tif','(2).tif','(3).tif','(4).tif','(5).tif',...
+%     '(6).tif','(7).tif','(8).tif','(9).tif','(10).tif'};
+lpics = {...
+    '(6).tif','(7).tif','(8).tif','(9).tif','(10).tif'};
 nbpics = size(bpics, 2);
 nlpics = size(lpics, 2);
 
@@ -11,8 +14,8 @@ PIC_MAX_ROW = 2160;
 PIC_MAX_COL = 2560;
 
 %must be odd!
-SAMP_COL_LEN = 201;
-SAMP_ROW_LEN = 201;
+SAMP_COL_LEN = 51;
+SAMP_ROW_LEN = 51;
 
 %model
 %y=output
@@ -65,23 +68,21 @@ x_list_d = kron(x_list_d, ones(SAMP_ROW_LEN, 1));
 
 for i = 1 : PIC_MAX_COL
     tmp_para = polyfit(x_list_u(:, i), y_list_u(:, i), 1);
-    %fitp(1, i,:,:) = corrcoef(x_list_u(:, i), y_list_u(:, i));
     a(1, i) = tmp_para(1);
     b3(1, i) = tmp_para(2);
     tmp_para = polyfit(x_list_d(:, i), y_list_d(:, i), 1);
-    %fitp(2, i,:,:) = corrcoef(x_list_d(:, i), y_list_d(:, i));
     a(2, i) = tmp_para(1);
     b3(2, i) = tmp_para(2);
 end
 
 %save
-save('DSNU.mat','a','b1','b2','b3');
+save('DSNU_51.mat','a','b1','b2','b3');
 
-if(0)
-    plot(x_list_u(:,100),y_list_u(:,100) + b1(1,100) + b2 ,'+');
+if(1)
+    plot(x_list_u(:,1736),y_list_u(:,1736) + b1(1,1736) + b2 ,'+');
     hold on;
     x = 0:5000:50000;
-    y = polyval([a(1,100),b1(1,100) + b2 + b3(1,100)],x);
+    y = polyval([a(1,1736),b1(1,1736) + b2 + b3(1,1736)],x);
     plot(x,y);
 end
 

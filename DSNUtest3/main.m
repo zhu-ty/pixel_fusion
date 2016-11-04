@@ -65,11 +65,9 @@ x_list_d = kron(x_list_d, ones(SAMP_ROW_LEN, 1));
 
 for i = 1 : PIC_MAX_COL
     tmp_para = polyfit(x_list_u(:, i), y_list_u(:, i), 1);
-    %fitp(1, i,:,:) = corrcoef(x_list_u(:, i), y_list_u(:, i));
     a(1, i) = tmp_para(1);
     b3(1, i) = tmp_para(2);
     tmp_para = polyfit(x_list_d(:, i), y_list_d(:, i), 1);
-    %fitp(2, i,:,:) = corrcoef(x_list_d(:, i), y_list_d(:, i));
     a(2, i) = tmp_para(1);
     b3(2, i) = tmp_para(2);
 end
