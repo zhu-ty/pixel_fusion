@@ -1,7 +1,7 @@
 clear;
 close all;
 
-load('DSNU_51.mat');
+load('DSNU_31_2_robust.mat');
 
 pics = {'L2.tif'};
 npics = size(pics, 2);
@@ -33,5 +33,5 @@ for i = 1 : npics
     end
     I(1 : PIC_MAX_ROW / 2, :) = I_ptux(:, :);
     I(PIC_MAX_ROW / 2 + 1 : end, :) = I_ptdx(:, :);
-    imwrite(I, ['p_51_', pics{i}]);
+    imwrite(I, ['p_31_robust_', pics{i}]);
 end

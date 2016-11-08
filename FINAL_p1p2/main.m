@@ -8,8 +8,8 @@ clear;
 % thH_ = [1400:100:1700];
 % pow_c = [0.15:0.05:0.25];
 
-strL = {'L'};
-strH = {'H'};
+strL = {'L','L2','L3'};
+strH = {'H','H2','H3'};
 thL_ = [2000];
 thH_ = [63000];
 pow_c = [0.2];
@@ -36,8 +36,8 @@ ILs = zeros(PIC_MAX_ROW, PIC_MAX_COL, s_strL);
 IHs = zeros(PIC_MAX_ROW, PIC_MAX_COL, s_strL);
 
 for i = 1:s_strL
-    ILs(:,:,i) = imread([,strL{i},'.tif']);
-    IHs(:,:,i) = imread([strH{i},'.tif']);
+    ILs(:,:,i) = imread([input_folder,'/',strL{i},'.tif']);
+    IHs(:,:,i) = imread([input_folder,'/',strH{i},'.tif']);
 end
 count = 1;
 for i = 1:s_thL_
@@ -55,6 +55,10 @@ for i = 1:s_thL_
             for l=1:s_strL
                 IL = ILs(:,:,l);
                 IH = IHs(:,:,l);
+                
+                IL = useage_col(IL);
+                IL = useage_row(IL);
+                
                 I_ans = image_mixer(IL,IH,thL_(i),thH_(j),...
                     pow_c(k),undefine_area,op_step,Hmax_,Lmax_,mul);
                 imwrite(I_ans,[str_new_path,'/',strL{l},'_',strH{l},'_','mix.tif']);
