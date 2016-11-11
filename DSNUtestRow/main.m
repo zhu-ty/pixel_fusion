@@ -66,14 +66,14 @@ x_list = kron(x_list, ones(1, SAMP_COL_LEN));
 %fitp = zeros(2, PIC_MAX_COL,2,2);
 
 for i = 1 : PIC_MAX_ROW
-    tmp_para = polyfit(x_list(i, :), y_list(i, :), 2);
-    aa(i, 1) = tmp_para(1);
-    a(i, 1) = tmp_para(2);
-    b3(i, 1) = tmp_para(3);
-%     tmp_para = createFit(x_list(i, :), y_list(i, :));
-%     aa(i, 1) = tmp_para.p1;
-%     a(i, 1) = tmp_para.p2;
-%     b3(i, 1) = tmp_para.p3;
+%     tmp_para = polyfit(x_list(i, :), y_list(i, :), 2);
+%     aa(i, 1) = tmp_para(1);
+%     a(i, 1) = tmp_para(2);
+%     b3(i, 1) = tmp_para(3);
+     tmp_para = createFit(x_list(i, :), y_list(i, :));
+     aa(i, 1) = tmp_para.p1;
+     a(i, 1) = tmp_para.p2;
+     b3(i, 1) = tmp_para.p3;
     if(mod(i,100) == 0)
         fprintf('%d/%d\n',i,PIC_MAX_ROW);
     end
