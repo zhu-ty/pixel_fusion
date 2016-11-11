@@ -4,7 +4,7 @@ clear;
 
 % strL = ['1LB';'3LB';'4LS'];
 % strH = ['1HB';'3HB';'4HS'];
-strL = {'p_row_30_2_p_31_2_robust_L2'};
+strL = {'p_row_30_2_p1p2_3000_p_31_2_robust_L2'};
 strH = {'H2'};
 % thL_ = [2000:200:2200];
 % thH_ = [1400:100:1700];
