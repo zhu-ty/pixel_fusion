@@ -6,13 +6,13 @@ function [I_ans] = image_mixer(IL, IH, thL_, thH_, pow_c, undefine_c, output_ste
 %   请注意区分
 % 推荐值：
 % thL_ = 2000;
-% thH_ = 51200;
+% thH_ = 54400;
 % pow_c = 0.2;
 % undefine_c = 0.5;
 % output_step = 500;
 % Hmax_ = 65535;
 % Lmax_ = 65535;
-% mul = 30(取决于两个增益差距）
+% mul = 28.3(取决于两个增益差距）
 
 thH = bitshift(thH_,-5);
 thL = bitshift(thL_,-5);
